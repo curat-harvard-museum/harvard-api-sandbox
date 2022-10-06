@@ -13,7 +13,7 @@ function AllObjects() {
     ["query-objects"],
     async () => {
       return await apiClient.get(
-        `/object?apikey=${process.env.REACT_APP_HARVARD_TOKEN}`
+        `/object?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&medium=paint`
       );
     },
     {
@@ -37,9 +37,12 @@ function AllObjects() {
     if (isLoadingObjects) setData("loading...");
   }, [isLoadingObjects]);
 
-  function handleGetObjects() {
+  async function handleGetObjects() {
     try {
-      getAllObjects();
+      const { data } = await getAllObjects();
+      console.log("jordy", data);
+
+      console.log("jordy", data.data.records[0].images[0].baseimageurl);
     } catch (err) {
       setData(formatResponse(err));
     }
