@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
-import AllObjects from "./components/AllObjects";
+import AllObjects from "./components/FullCollection/AllObjects";
 
 function Routing() {
   return (
     <Router>
       <Routes>
-        <Route path="collection" element={<AllObjects />} />
+        <Route path="/" element={<AllObjects />} />
       </Routes>
     </Router>
   );
