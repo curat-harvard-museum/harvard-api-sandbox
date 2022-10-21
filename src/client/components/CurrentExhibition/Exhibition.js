@@ -1,12 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../../http-common";
+import apiClient from "../../../http-common";
 
-function AllHues() {
-  const { data, refetch: getCentury } = useQuery(
+// import "./Exhibition.css";
+
+function Exhibition() {
+  const { data, refetch: getExhibition } = useQuery(
     ["query-objects"],
     async () => {
       return await apiClient.get(
-        `/color?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&size=100`
+        `/exhibition?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&status=current&venue=HAM`
       );
     },
     {
@@ -14,21 +16,19 @@ function AllHues() {
     }
   );
 
-  function handleGetCentury() {
-    getCentury();
+  function handleGetObjects() {
+    getExhibition();
   }
-  console.log("hues: ", data);
-  //   console.log("name: ", data?.data.records[0].name);
-  //   console.log("count: ", data?.data.records[0].objectcount);
-
+  console.log("exhibition: ", data);
+  console.log("gallery: ", data?.data.records[0].venues[0].galleries);
   return (
     <>
       <div className="container">
         {/* <button onClick={handleGetObjects}>View Full Collection</button> */}
         {data?.data.records.map((record) => (
           <p key={record.id}>
-            {record.name} -- Hex: {record.hex}
-            {/* <br></br>
+            {record.title}
+            <br></br>
             End Date: {record.enddate}
             <br></br>
             Gallery Location:
@@ -45,7 +45,13 @@ function AllHues() {
                 src={record.primaryimageurl}
                 alt="{record.title} by {record.people[0].name} "
               ></img>
-            ) : null} */}
+            ) : null}
+            <div>
+              {/* <h3
+                dangerouslySetInnerHTML={{ __html: record.textiledescription }}
+              ></h3> */}
+              {/* {record.textiledescription} */}
+            </div>
           </p>
         ))}
       </div>
@@ -53,4 +59,4 @@ function AllHues() {
   );
 }
 
-export default AllHues;
+export default Exhibition;

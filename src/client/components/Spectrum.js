@@ -1,12 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../http-common";
 
-function AllHues() {
-  const { data, refetch: getCentury } = useQuery(
+// import "./Exhibition.css";
+
+function Spectrum() {
+  const { data, refetch: getSpectrum } = useQuery(
     ["query-objects"],
     async () => {
       return await apiClient.get(
-        `/color?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&size=100`
+        `/spectrum?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&q=month:1&sort=daynumber`
       );
     },
     {
@@ -14,20 +16,18 @@ function AllHues() {
     }
   );
 
-  function handleGetCentury() {
-    getCentury();
+  function handleGetObjects() {
+    getSpectrum();
   }
-  console.log("hues: ", data);
-  //   console.log("name: ", data?.data.records[0].name);
-  //   console.log("count: ", data?.data.records[0].objectcount);
-
+  console.log("spectrum: ", data);
+  console.log("spectrum2: ", data?.data.records[0].color);
   return (
     <>
       <div className="container">
         {/* <button onClick={handleGetObjects}>View Full Collection</button> */}
         {data?.data.records.map((record) => (
           <p key={record.id}>
-            {record.name} -- Hex: {record.hex}
+            {record.color}
             {/* <br></br>
             End Date: {record.enddate}
             <br></br>
@@ -46,6 +46,12 @@ function AllHues() {
                 alt="{record.title} by {record.people[0].name} "
               ></img>
             ) : null} */}
+            <div>
+              {/* <h3
+                dangerouslySetInnerHTML={{ __html: record.textiledescription }}
+              ></h3> */}
+              {/* {record.textiledescription} */}
+            </div>
           </p>
         ))}
       </div>
@@ -53,4 +59,4 @@ function AllHues() {
   );
 }
 
-export default AllHues;
+export default Spectrum;

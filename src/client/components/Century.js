@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../http-common";
 
-function AllHues() {
+function Century() {
   const { data, refetch: getCentury } = useQuery(
     ["query-objects"],
     async () => {
       return await apiClient.get(
-        `/color?apikey=${process.env.REACT_APP_HARVARD_TOKEN}&size=100`
+        `/century?apikey=${process.env.REACT_APP_HARVARD_TOKEN}`
       );
     },
     {
@@ -17,9 +17,9 @@ function AllHues() {
   function handleGetCentury() {
     getCentury();
   }
-  console.log("hues: ", data);
-  //   console.log("name: ", data?.data.records[0].name);
-  //   console.log("count: ", data?.data.records[0].objectcount);
+  console.log("century: ", data);
+  console.log("name: ", data?.data.records[0].name);
+  console.log("count: ", data?.data.records[0].objectcount);
 
   return (
     <>
@@ -27,7 +27,7 @@ function AllHues() {
         {/* <button onClick={handleGetObjects}>View Full Collection</button> */}
         {data?.data.records.map((record) => (
           <p key={record.id}>
-            {record.name} -- Hex: {record.hex}
+            {record.name} -- Count: {record.objectcount}
             {/* <br></br>
             End Date: {record.enddate}
             <br></br>
@@ -53,4 +53,4 @@ function AllHues() {
   );
 }
 
-export default AllHues;
+export default Century;
