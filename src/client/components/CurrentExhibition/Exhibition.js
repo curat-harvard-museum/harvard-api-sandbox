@@ -46,12 +46,7 @@ function Exhibition() {
                 alt="{record.title} by {record.people[0].name} "
               ></img>
             ) : null}
-            <div>
-              {/* <h3
-                dangerouslySetInnerHTML={{ __html: record.textiledescription }}
-              ></h3> */}
-              {/* {record.textiledescription} */}
-            </div>
+            <div>{/* {record.textiledescription} */}</div>
           </p>
         ))}
       </div>
