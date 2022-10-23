@@ -4,14 +4,14 @@ An application that allows users to plan their trip to the Harvard Art Museum at
 
 Technologies used:
 
-• [Chakra UI](https://chakra-ui.com)
-• [Chart.js](https://www.chartjs.org)
-• [Express](https://expressjs.com)
-• [JSON Web Token](https://jwt.io)
-• [Node](https://nodejs.org/en/)
-• [React](https://reactjs.org)
-• [Redux](https://redux.js.org)
-• Sequelize/PostgreSQL
+- [Chakra UI](https://chakra-ui.com)
+- [Chart.js](https://www.chartjs.org)
+- [Express](https://expressjs.com)
+- [JSON Web Token](https://jwt.io)
+- [Node](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [Redux](https://redux.js.org)
+- Sequelize/PostgreSQL
 
 ## Installation
 
