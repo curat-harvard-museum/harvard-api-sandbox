@@ -20,7 +20,7 @@ In the project directory, you will need to:
 1. Request an API key from [Harvard Art Museum](https://harvardartmuseums.org/collections/api)
 2. Install NPM packages `npm install`
 3. Create database `createdb curat-museum` and seed file `npm run seed`
-4. Start server `npm start`and open [http://localhost:8080](http://localhost:8080) to view it in your browser
+4. Start server `npm start` and open [http://localhost:8080](http://localhost:8080) to view it in your browser
 
 ## Application
 
@@ -30,6 +30,6 @@ Deployed link: [Curāt Museum](https://curat-museum-heroku.herokuapp.com/home)
 
 ## Meet the Team
 
-[Jasmine Cheung](https://github.com/cheungjasmine)
-[Jordyn Rector](https://github.com/jordyy)
+[Jasmine Cheung](https://github.com/cheungjasmine) <br />
+[Jordyn Rector](https://github.com/jordyy) <br />
 [Joyce Wong](https://github.com/joyce-wong)
