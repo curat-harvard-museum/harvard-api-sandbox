@@ -1,17 +1,22 @@
 # Curāt Museum
 
-An application that allows users to plan their trip to the Harvard Art Museum at ease. Users can view details on artworks, current exhibitions and create an account in order to store their liked, visited, and to be visit artworks.
+An application that allows users to plan their trip to the Harvard Art Museum. Users can view details on artworks, current exhibitions and create an account in order to store their liked, visited, and to be visit artworks.
 
 Technologies used:
 
-- [Chakra UI](https://chakra-ui.com)
-- [Chart.js](https://www.chartjs.org)
+- [PostgreSQL](https://www.postgresql.org)
+- [Sequelize](https://sequelize.org)
+- [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com)
 - [JSON Web Token](https://jwt.io)
-- [Node](https://nodejs.org/en/)
+- BCrypt
+- [Figma](https://www.figma.com/)
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
-- Sequelize/PostgreSQL
+- [Harvard Art Museum's API](https://harvardartmuseums.org/collections/api)
+- [Chakra UI](https://chakra-ui.com)
+- [Chart.js](https://www.chartjs.org)
+- [Heroku](https://www.heroku.com/)
 
 ## Installation
 
