@@ -1,6 +1,6 @@
 # Curāt Museum
 
-An application that allows users to plan their trip to the Harvard Art Museum. Users can view details on artworks, current exhibitions and create an account in order to store their liked, visited, and to be visit artworks.
+An application that allows users to plan their trip to the Harvard Art Museum. Users can view details on artworks, current exhibitions and create an account in order to store liked, visited, and to be visit artworks.
 
 Technologies used:
 
@@ -31,7 +31,9 @@ In the project directory, you will need to:
 
 Deployed link: [Curāt Museum](https://curat-museum-heroku.herokuapp.com/home)
 
-**Insert gifs/photos of app**
+## Preview
+
+![Mobile View](assets/Curat-Mobile.gif)
 
 ## Meet the Team
 
