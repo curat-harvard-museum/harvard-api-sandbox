@@ -33,7 +33,7 @@ Deployed link: [Curāt Museum](https://curat-museum-heroku.herokuapp.com/home)
 
 ## Preview
 
-![Mobile View](assets/Curat-Mobile.gif)
+![Mobile View](https://github.com/curat-harvard-museum/harvard-api-sandbox/blob/main/public/assets/Curat-Mobile.gif)
 
 ## Meet the Team
 
